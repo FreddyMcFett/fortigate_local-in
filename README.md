@@ -19,6 +19,7 @@ Dieses Repository enthält ein Python-Skript, das ein FortiGate CLI-Konfiguratio
 ## Über das Projekt
 
 Das **FortiGate Local-In Policy Generator**-Skript ist ein Hilfsmittel zur Automatisierung der Erstellung von Firewall-Konfigurationsskripten. Es kommuniziert mit der FortiGate über die REST API, um WAN-Schnittstellen und zugehörige IP-Adressen zu ermitteln, und generiert daraus ein CLI-Skript, welches:
+
 - Adressobjekte für erlaubte IP-Ranges erstellt
 - Adressgruppen zusammenstellt
 - Benutzerdefinierte Service-Objekte konfiguriert
@@ -53,43 +54,58 @@ Installiere die erforderlichen Pakete beispielsweise über `pip`:
 
 ```bash
 pip install requests jinja2
+```
 
+---
 
-Installation und Setup
-Repository klonen:
+## Installation und Setup
 
-bash
-Kopieren
+### Repository klonen
+
+```bash
 git clone https://github.com/dein-benutzername/fortigate_local-in_policy_generator.git
 cd fortigate_local-in_policy_generator
-Konfigurationsanpassungen:
+```
 
-Öffne das Skript fortigate_local-in_policy_generator.py und passe im Bereich der Konfiguration (oben im Skript) die Einträge in ALLOWED_IPS an. Trage hier die zulässigen IP-Ranges ein, z.B.:
+### Konfigurationsanpassungen
 
-python
-Kopieren
+Öffne das Skript `fortigate_local-in_policy_generator.py` und passe im Bereich der Konfiguration (oben im Skript) die Einträge in `ALLOWED_IPS` an. Trage hier die zulässigen IP-Ranges ein, z.B.:
+
+```python
 ALLOWED_IPS = [
     "197.268.12.15/30",
     "..."
 ]
-Passe gegebenenfalls auch die Namen der Addressobjekte und Service-Objekte (ALLOW_IP_GROUP, MGMT_SERVICE) an.
+```
 
-Verwendung
-Ausführen des Skripts:
+Passe gegebenenfalls auch die Namen der Addressobjekte und Service-Objekte (`ALLOW_IP_GROUP`, `MGMT_SERVICE`) an.
+
+---
+
+## Verwendung
+
+### Ausführen des Skripts
 
 Starte das Skript über die Kommandozeile:
 
-bash
-Kopieren
+```bash
 ./fortigate_local-in_policy_generator.py
-Eingabeaufforderungen:
+```
 
-FortiGate Host: Gib die IP-Adresse oder den Hostnamen deiner FortiGate ein.
-Management Port: Gib den Management-Port deiner FortiGate ein.
-REST API Key: Gib deinen API-Schlüssel zur Authentifizierung ein.
-Ergebnis:
+### Eingabeaufforderungen
+
+- **FortiGate Host:** Gib die IP-Adresse oder den Hostnamen deiner FortiGate ein.
+- **Management Port:** Gib den Management-Port deiner FortiGate ein.
+- **REST API Key:** Gib deinen API-Schlüssel zur Authentifizierung ein.
+
+### Ergebnis
 
 Nach Eingabe der erforderlichen Daten generiert das Skript das FortiGate CLI-Konfigurationsskript, das anschließend im Terminal ausgegeben wird. Dieses Skript kann dann in der FortiGate CLI verwendet werden, um die lokale In-Policy entsprechend zu konfigurieren.
 
-Anpassung der Konfiguration
+---
+
+## Anpassung der Konfiguration
+
 Falls du weitere Anpassungen vornehmen möchtest, kannst du das Jinja2 Template im Skript modifizieren. Das Template ist im Skript integriert und definiert die Struktur der generierten CLI-Befehle. Änderungen am Template ermöglichen es dir, zusätzliche Konfigurationsparameter oder alternative Strukturen zu implementieren.
+
+---

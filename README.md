@@ -12,7 +12,6 @@ Dieses Repository enthält ein Python-Skript, das ein FortiGate CLI-Konfiguratio
 - [Installation und Setup](#installation-und-setup)
 - [Verwendung](#verwendung)
 - [Anpassung der Konfiguration](#anpassung-der-konfiguration)
-- [Lizenz](#lizenz)
 
 ---
 

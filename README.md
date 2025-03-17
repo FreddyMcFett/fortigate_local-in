@@ -23,7 +23,7 @@ Das **FortiGate Local-In Policy Generator**-Skript ist ein Hilfsmittel zur Autom
 - Adressobjekte für erlaubte IP-Ranges erstellt
 - Adressgruppen zusammenstellt
 - Benutzerdefinierte Service-Objekte konfiguriert
-- Lokale In-Policies für die jeweiligen WAN-Interfaces anlegt
+- Local-In Policies für die jeweiligen WAN-Interfaces anlegt
 
 Dieses Tool ist besonders nützlich, um wiederkehrende Konfigurationsaufgaben zu vereinfachen und Fehler bei manuellen Eingaben zu vermeiden.
 
@@ -38,7 +38,7 @@ Dieses Tool ist besonders nützlich, um wiederkehrende Konfigurationsaufgaben zu
   - Die WAN-IP-Konfiguration in Adressobjekte überführt
   - Eine Adressgruppe mit den erlaubten IPs zusammenstellt
   - Einen benutzerdefinierten Service für den Management-Port definiert
-  - Zwei lokale In-Policies für jedes WAN-Interface erzeugt (einen für den erlaubten Zugriff und einen für den allgemeinen Zugriff)
+  - Zwei Local-In Policies für jedes WAN-Interface erzeugt (einen für den erlaubten Zugriff und einen für den allgemeinen Zugriff)
 - **Fehlerbehandlung:** Das Skript prüft, ob gültige WAN-Interfaces vorhanden sind und gibt entsprechende Fehlermeldungen aus.
 
 ---
@@ -100,7 +100,7 @@ Starte das Skript über die Kommandozeile:
 
 ### Ergebnis
 
-Nach Eingabe der erforderlichen Daten generiert das Skript das FortiGate CLI-Konfigurationsskript, das anschließend im Terminal ausgegeben wird. Dieses Skript kann dann in der FortiGate CLI verwendet werden, um die lokale In-Policy entsprechend zu konfigurieren.
+Nach Eingabe der erforderlichen Daten generiert das Skript das FortiGate CLI-Konfigurationsskript, das anschließend im Terminal ausgegeben wird. Dieses Skript kann dann in der FortiGate CLI verwendet werden, um die Local-In Policy entsprechend zu konfigurieren.
 
 ---
 
